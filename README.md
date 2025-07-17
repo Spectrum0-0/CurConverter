@@ -13,11 +13,11 @@ winget install Lua.Lua
 
 ### Linux
 
-**Debian/Ubuntu based distros: ** sudo apt install lua5.4
+Debian/Ubuntu based distros: sudo apt install lua5.4
 
-**Fedora: ** sudo dnf install lua
+Fedora: sudo dnf install lua
 
-**Arch based distros: ** sudo pacman -S lua
+Arch based distros:  sudo pacman -S lua
 
 ### Mac OS
 
