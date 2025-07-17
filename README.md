@@ -23,7 +23,7 @@ Arch based distros:  sudo pacman -S lua
 
 brew install lua
 
-
+----------
 
 Clone this repo with **git clone https://github.com/Spectrum0-0/CurConverter** (git must be installed).
 
