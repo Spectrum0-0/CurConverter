@@ -1,3 +1,4 @@
+print()
 local directory = io.popen('dir "toConvert" /b')
 
 print("What file extension would you like to convert to? (e.g : jpg, png, cur, txt, py)\n")
