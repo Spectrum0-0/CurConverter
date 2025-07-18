@@ -1,5 +1,13 @@
+local dir_sep = package.config:sub(1, 1)
+local directory
+
 print()
-local directory = io.popen('dir "toConvert" /b')
+
+if dir_sep == "\\" then
+    directory = io.popen('dir "toConvert" /b')
+else 
+    directory = io.popen('ls "toConvert"')
+end
 
 print("What file extension would you like to convert to? (e.g : jpg, png, cur, txt, py)\n")
 local target_Ext = io.read()
@@ -16,7 +24,7 @@ local _, b = pcall(function()
 
         print("Converted " .. file .. " to " .. new_file .. "!")
 
-        os.rename("toConvert\\" .. file, "toConvert\\" .. new_file)
+        os.rename("toConvert" .. dir_sep .. file, "toConvert" .. dir_sep .. new_file)
     end
 
         ::continue::
@@ -24,3 +32,5 @@ local _, b = pcall(function()
 end)
 
 if b then print(b) end
+
+print("Finished!")
